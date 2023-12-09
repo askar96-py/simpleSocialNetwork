@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="my_profile">
+    <form action="#" method="post">
+        <div class="mb-3 row">
+            <label for="inputName" class="col-sm-3 col-form-label fw-bold">Имя:</label>
+            <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputName" name="name" value="{{ data['name'] }}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputSurname" class="col-sm-3 col-form-label fw-bold">Фамилия:</label>
+            <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputSurname" name="surname" value="{{ data['surname'] }}">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputEmail" class="col-sm-3 col-form-label fw-bold">Email:</label>
+            <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail" name="email" value="{{ data['email'] }}">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputProfession" class="col-sm-3 col-form-label fw-bold">Профессия:</label>
+            <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputProfession" name="profession" value="{{ data['profession'] }}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputCity" class="col-sm-3 col-form-label fw-bold">Город:</label>
+            <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputCity" name="city" value="{{ data['city'] }}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputAge" class="col-sm-3 col-form-label fw-bold">Возраст:</label>
+            <div class="col-sm-9">
+            <input type="number" class="form-control" id="inputAge" name="age" value="{{ data['age'] }}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-3 col-form-label fw-bold">Пароль:</label>
+            <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword" name="password">
+            </div>
+        </div>
+        <button type="button" class="btn btn-success w-100 change__profile mb-2">Изменить</button>
+        <button type="submit" class="save__change btn btn-primary w-100">Сохранить</button>
+    </form>
+    <form action="#" method="post">
+        <button type="submit" class="btn btn-danger w-100 delete__profile">Удалить Аккаунт</button>
+    </form>
+</section>
+<script>
+    $(document).ready(function(){
+        $(".save__change").css('display', 'none');
+        $(".form-control").prop('readonly', true);
+        $(".change__profile").click(function(){
+            $(this).css('display', 'none');;
+            $(".form-control").removeAttr('readonly')
+            $(".save__change").css('display', 'block');
+            $(".delete__profile").css('display', 'none')
+            $(".form-control").prop('readonly', false);
+        });
+    });
+</script>
+{% endblock%}

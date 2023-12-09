@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="d-flex justify-content-center">
+    <div class="profile">
+        <h2 class="profile__name">{{ data['name'] }} {{ data['surname'] }}</h2>
+        <p class="profile__age"><span>Age:</span> {{ data['age'] }}</p>
+        <p class="profile__proffesion"><span>Proffesion:</span> {{ data['profession'] }} </p>
+        <p class="profile__email"><span>Email:</span> {{ data['email'] }}</p>
+        <p class="profile__city"><span>City:</span> {{ data['city'] }}</p>
+    </div>
+</section>
+{% endblock %}

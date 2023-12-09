@@ -1,0 +1,39 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "name": "John",
+        "surname": "Doe",
+        "password": "12345",
+        "email": "john.doe@example.com",
+        "profession": "Software Engineer",
+        "age": 30,
+        "city": "New York"
+      },
+      {
+        "id": 2,
+        "username": "jane_smith",
+        "name": "Jane",
+        "surname": "Smith",
+        "password": "12345",
+        "email": "jane.smith@example.com",
+        "profession": "Biologist",
+        "age": 25,
+        "city": "Los Angeles"
+      },
+      {
+        "id": 3,
+        "username": "bob_jackson",
+        "name": "Bob",
+        "surname": "Jackson", 
+        "password": "12345",
+        "email": "bob.jackson@example.com",
+        "profession": "Graphic Designer",
+        "age": 28,
+        "city": "Chicago" 
+      }
+    ],
+    "current_user" : null
+  }
+  

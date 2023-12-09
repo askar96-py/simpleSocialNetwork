@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block login %}
+    <a href="/sign" class="btn btn-success">Зарегистрироваться</a>
+{% endblock%}
+{% block content %}
+  <section class="login">
+      <form action="#" method="post">
+          <div class="mb-4">
+            <label for="exampleInputUserName" class="form-label ">Логин</label>
+            <input type="text" class="form-control" id="exampleInputUserName" aria-describedby="nameHelp" name="username">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Войти</button>
+      </form>
+  </section>
+  {% if alert != None %}
+    <script>
+      $(document).ready(function(){
+        $('.form-control').addClass("is-invalid")
+      });
+    </script>
+  {% endif%}
+{% endblock %}

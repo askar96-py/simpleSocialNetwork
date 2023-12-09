@@ -1,0 +1,77 @@
+
+
+.login {
+    border: 1px solid rgba(0,0,0, 0.3);
+    border-radius: 5%;
+    padding: 50px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.login.invalid{
+    border: 1px solid rgba(red, 0, 0, 0.3);
+    box-shadow: inset;
+}
+
+.login button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.user {
+    border: 1px solid rgba(0,0,0, 0.3);
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 3%;
+}
+
+.user__name {
+    margin-bottom: 20px;
+}
+
+.user__age {
+    margin-bottom: 0;
+}
+
+.user__city {
+    margin-bottom: 0;
+}
+
+.profile {
+    margin-top: 100px;
+}
+
+.profile__name {
+    margin-bottom: 40px;
+}
+
+.profile p {
+    margin-bottom: 0;
+}
+
+.profile p span {
+    font-weight: bold;
+}
+
+
+.sign {
+    margin-top: 100px;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.sign__btn {
+    margin-top: 40px;
+}
+
+.my_profile {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.save__change {
+    display: none;
+}

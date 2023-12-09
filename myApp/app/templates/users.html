@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block login %}
+{% if not current_user %}
+    <a href="/login" class="btn btn-outline-primary">Войти</a>
+    <a href="/sign" class="btn btn-success">Зарегистрироваться</a> 
+{% else %}
+    <a href="/my-profile" class="btn btn-outline-primary">Мой Профиль</a>
+{% endif %}
+{% endblock %}
+{% block content %}
+<section class="d-flex flex-wrap gap-5 justify-content-center mt-5">
+    {% for i in users %}
+        <a href="/id/{{ i['id'] }}">
+            <div class="user border-1 border-secondary">
+                <h4 class="user__name">{{ i['name'] }} {{ i['surname'] }}</h4>
+                <p class="user__age">Age: {{ i['age'] }}</p>
+                <p class="user__city">City: {{ i['city']}}</p>
+            </div>
+        </a>
+    {% endfor%}
+</section>
+{% endblock %}
